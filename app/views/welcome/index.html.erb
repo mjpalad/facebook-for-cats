@@ -1,0 +1,17 @@
+<h1>Cat Articles</h1>
+<div id="cats">
+  <% @cats.each do |cat| %>
+    <div class="cat">
+      <div class="catHeader">
+        <%= image_tag cat["authorImg"], :class => "author" %>
+        <div class="authorName"><%= cat["author"] %></div>
+        <div class="date"><%= cat["date"] %></div>
+      </div>
+
+      <%= image_tag cat["imgSrc"], :class => "author" %>
+      <p><%= cat["body"] %></p>
+      <span>Likes <%= cat["likes"] %></span>
+      <span>Comments <%= cat["comments"] %></span>
+    </div>
+  <% end %>
+</div>
